@@ -54,6 +54,7 @@ add_message_files(
   FILES
   # Message1.msg
   candata.msg
+  RadarCluster.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -145,7 +146,7 @@ link_directories(
 # add_executable(${PROJECT_NAME}_node src/demo02_sr75_node.cpp)
 add_executable(get_can_data src/get_can_data.cpp)
 add_executable(get_radar_info_cluster src/get_radar_info_cluster.cpp)
-
+add_executable(publish_radar_cluster src/publish_radar_cluster.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -157,7 +158,7 @@ add_executable(get_radar_info_cluster src/get_radar_info_cluster.cpp)
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(get_can_data ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(get_radar_info_cluster ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
+add_dependencies(publish_radar_cluster ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
@@ -170,7 +171,8 @@ target_link_libraries(get_can_data
 target_link_libraries(get_radar_info_cluster
   ${catkin_LIBRARIES}
 )
-
+target_link_libraries(publish_radar_cluster 
+  ${catkin_LIBRARIES})
 #############
 ## Install ##
 #############

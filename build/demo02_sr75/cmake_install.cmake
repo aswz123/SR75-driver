@@ -38,7 +38,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/demo02_sr75/msg" TYPE FILE FILES "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/demo02_sr75/msg" TYPE FILE FILES
+    "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg"
+    "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

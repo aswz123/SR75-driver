@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/aswz/catkin_ws/build
 include demo02_sr75/CMakeFiles/demo02_sr75_generate_messages_lisp.dir/progress.make
 
 demo02_sr75/CMakeFiles/demo02_sr75_generate_messages_lisp: /home/aswz/catkin_ws/devel/share/common-lisp/ros/demo02_sr75/msg/candata.lisp
+demo02_sr75/CMakeFiles/demo02_sr75_generate_messages_lisp: /home/aswz/catkin_ws/devel/share/common-lisp/ros/demo02_sr75/msg/RadarCluster.lisp
 
 
 /home/aswz/catkin_ws/devel/share/common-lisp/ros/demo02_sr75/msg/candata.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
@@ -61,8 +62,14 @@ demo02_sr75/CMakeFiles/demo02_sr75_generate_messages_lisp: /home/aswz/catkin_ws/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aswz/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from demo02_sr75/candata.msg"
 	cd /home/aswz/catkin_ws/build/demo02_sr75 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg -Idemo02_sr75:/home/aswz/catkin_ws/src/demo02_sr75/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p demo02_sr75 -o /home/aswz/catkin_ws/devel/share/common-lisp/ros/demo02_sr75/msg
 
+/home/aswz/catkin_ws/devel/share/common-lisp/ros/demo02_sr75/msg/RadarCluster.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/aswz/catkin_ws/devel/share/common-lisp/ros/demo02_sr75/msg/RadarCluster.lisp: /home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/aswz/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from demo02_sr75/RadarCluster.msg"
+	cd /home/aswz/catkin_ws/build/demo02_sr75 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg -Idemo02_sr75:/home/aswz/catkin_ws/src/demo02_sr75/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p demo02_sr75 -o /home/aswz/catkin_ws/devel/share/common-lisp/ros/demo02_sr75/msg
+
 demo02_sr75_generate_messages_lisp: demo02_sr75/CMakeFiles/demo02_sr75_generate_messages_lisp
 demo02_sr75_generate_messages_lisp: /home/aswz/catkin_ws/devel/share/common-lisp/ros/demo02_sr75/msg/candata.lisp
+demo02_sr75_generate_messages_lisp: /home/aswz/catkin_ws/devel/share/common-lisp/ros/demo02_sr75/msg/RadarCluster.lisp
 demo02_sr75_generate_messages_lisp: demo02_sr75/CMakeFiles/demo02_sr75_generate_messages_lisp.dir/build.make
 
 .PHONY : demo02_sr75_generate_messages_lisp

@@ -258,6 +258,21 @@ demo02_sr75_gencpp/fast:
 .PHONY : demo02_sr75_gencpp/fast
 
 # Convenience name for target.
+demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/rule:
+	cd /home/aswz/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/rule
+.PHONY : demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/rule
+
+# Convenience name for target.
+_demo02_sr75_generate_messages_check_deps_RadarCluster: demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/rule
+
+.PHONY : _demo02_sr75_generate_messages_check_deps_RadarCluster
+
+# fast build rule for target.
+_demo02_sr75_generate_messages_check_deps_RadarCluster/fast:
+	cd /home/aswz/catkin_ws/build && $(MAKE) -f demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/build.make demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/build
+.PHONY : _demo02_sr75_generate_messages_check_deps_RadarCluster/fast
+
+# Convenience name for target.
 demo02_sr75/CMakeFiles/demo02_sr75_generate_messages.dir/rule:
 	cd /home/aswz/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 demo02_sr75/CMakeFiles/demo02_sr75_generate_messages.dir/rule
 .PHONY : demo02_sr75/CMakeFiles/demo02_sr75_generate_messages.dir/rule
@@ -721,6 +736,21 @@ sensor_msgs_generate_messages_py: demo02_sr75/CMakeFiles/sensor_msgs_generate_me
 sensor_msgs_generate_messages_py/fast:
 	cd /home/aswz/catkin_ws/build && $(MAKE) -f demo02_sr75/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make demo02_sr75/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+demo02_sr75/CMakeFiles/publish_radar_cluster.dir/rule:
+	cd /home/aswz/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 demo02_sr75/CMakeFiles/publish_radar_cluster.dir/rule
+.PHONY : demo02_sr75/CMakeFiles/publish_radar_cluster.dir/rule
+
+# Convenience name for target.
+publish_radar_cluster: demo02_sr75/CMakeFiles/publish_radar_cluster.dir/rule
+
+.PHONY : publish_radar_cluster
+
+# fast build rule for target.
+publish_radar_cluster/fast:
+	cd /home/aswz/catkin_ws/build && $(MAKE) -f demo02_sr75/CMakeFiles/publish_radar_cluster.dir/build.make demo02_sr75/CMakeFiles/publish_radar_cluster.dir/build
+.PHONY : publish_radar_cluster/fast
 
 # Convenience name for target.
 demo02_sr75/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
@@ -1601,6 +1631,33 @@ src/get_radar_info_cluster.cpp.s:
 	cd /home/aswz/catkin_ws/build && $(MAKE) -f demo02_sr75/CMakeFiles/get_radar_info_cluster.dir/build.make demo02_sr75/CMakeFiles/get_radar_info_cluster.dir/src/get_radar_info_cluster.cpp.s
 .PHONY : src/get_radar_info_cluster.cpp.s
 
+src/publish_radar_cluster.o: src/publish_radar_cluster.cpp.o
+
+.PHONY : src/publish_radar_cluster.o
+
+# target to build an object file
+src/publish_radar_cluster.cpp.o:
+	cd /home/aswz/catkin_ws/build && $(MAKE) -f demo02_sr75/CMakeFiles/publish_radar_cluster.dir/build.make demo02_sr75/CMakeFiles/publish_radar_cluster.dir/src/publish_radar_cluster.cpp.o
+.PHONY : src/publish_radar_cluster.cpp.o
+
+src/publish_radar_cluster.i: src/publish_radar_cluster.cpp.i
+
+.PHONY : src/publish_radar_cluster.i
+
+# target to preprocess a source file
+src/publish_radar_cluster.cpp.i:
+	cd /home/aswz/catkin_ws/build && $(MAKE) -f demo02_sr75/CMakeFiles/publish_radar_cluster.dir/build.make demo02_sr75/CMakeFiles/publish_radar_cluster.dir/src/publish_radar_cluster.cpp.i
+.PHONY : src/publish_radar_cluster.cpp.i
+
+src/publish_radar_cluster.s: src/publish_radar_cluster.cpp.s
+
+.PHONY : src/publish_radar_cluster.s
+
+# target to generate assembly for a file
+src/publish_radar_cluster.cpp.s:
+	cd /home/aswz/catkin_ws/build && $(MAKE) -f demo02_sr75/CMakeFiles/publish_radar_cluster.dir/build.make demo02_sr75/CMakeFiles/publish_radar_cluster.dir/src/publish_radar_cluster.cpp.s
+.PHONY : src/publish_radar_cluster.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1618,6 +1675,7 @@ help:
 	@echo "... demo02_sr75_geneus"
 	@echo "... rebuild_cache"
 	@echo "... demo02_sr75_gencpp"
+	@echo "... _demo02_sr75_generate_messages_check_deps_RadarCluster"
 	@echo "... demo02_sr75_generate_messages"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_lisp"
@@ -1649,6 +1707,7 @@ help:
 	@echo "... demo02_sr75_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... publish_radar_cluster"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... demo02_sr75_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_nodejs"
@@ -1712,6 +1771,9 @@ help:
 	@echo "... src/get_radar_info_cluster.o"
 	@echo "... src/get_radar_info_cluster.i"
 	@echo "... src/get_radar_info_cluster.s"
+	@echo "... src/publish_radar_cluster.o"
+	@echo "... src/publish_radar_cluster.i"
+	@echo "... src/publish_radar_cluster.s"
 .PHONY : help
 
 

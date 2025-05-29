@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg"
+messages_str = "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg;/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg"
 services_str = ""
 pkg_name = "demo02_sr75"
 dependencies_str = "std_msgs"

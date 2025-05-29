@@ -363,6 +363,19 @@ demo02_sr75_gencpp/fast:
 .PHONY : demo02_sr75_gencpp/fast
 
 #=============================================================================
+# Target rules for targets named _demo02_sr75_generate_messages_check_deps_RadarCluster
+
+# Build rule for target.
+_demo02_sr75_generate_messages_check_deps_RadarCluster: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _demo02_sr75_generate_messages_check_deps_RadarCluster
+.PHONY : _demo02_sr75_generate_messages_check_deps_RadarCluster
+
+# fast build rule for target.
+_demo02_sr75_generate_messages_check_deps_RadarCluster/fast:
+	$(MAKE) -f demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/build.make demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/build
+.PHONY : _demo02_sr75_generate_messages_check_deps_RadarCluster/fast
+
+#=============================================================================
 # Target rules for targets named demo02_sr75_generate_messages
 
 # Build rule for target.
@@ -764,6 +777,19 @@ sensor_msgs_generate_messages_py: cmake_check_build_system
 sensor_msgs_generate_messages_py/fast:
 	$(MAKE) -f demo02_sr75/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make demo02_sr75/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named publish_radar_cluster
+
+# Build rule for target.
+publish_radar_cluster: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 publish_radar_cluster
+.PHONY : publish_radar_cluster
+
+# fast build rule for target.
+publish_radar_cluster/fast:
+	$(MAKE) -f demo02_sr75/CMakeFiles/publish_radar_cluster.dir/build.make demo02_sr75/CMakeFiles/publish_radar_cluster.dir/build
+.PHONY : publish_radar_cluster/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_eus
@@ -1508,6 +1534,7 @@ help:
 	@echo "... demo02_sr75_generate_messages_lisp"
 	@echo "... demo02_sr75_geneus"
 	@echo "... demo02_sr75_gencpp"
+	@echo "... _demo02_sr75_generate_messages_check_deps_RadarCluster"
 	@echo "... demo02_sr75_generate_messages"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_lisp"
@@ -1539,6 +1566,7 @@ help:
 	@echo "... demo02_sr75_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... publish_radar_cluster"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... demo02_sr75_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_nodejs"
