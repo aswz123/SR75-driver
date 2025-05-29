@@ -17,7 +17,7 @@ RadarPktBytes radar_data_cluster;
 
 int cluster_num = 0;
 int cluster_count = 0;
-pcl::PointCloud<pcl::PointXYZ> cloud; 
+pcl::PointCloud<pcl::PointXYZI> cloud; 
 ros::Publisher pcl_pub;
 sensor_msgs::PointCloud2 output;
 
@@ -26,7 +26,6 @@ void domsg(const demo02_sr75::candata::ConstPtr& candata)
     if(candata->frameid == 0x701)
     {
         int cluster_quantity = candata->datalen / 8;
-        // 只处理不会导致越界的数量
         int clusters_to_process = std::min(cluster_quantity, cluster_num - cluster_count);
 
         for(int count = 0; count < clusters_to_process; count++)
@@ -63,32 +62,26 @@ void domsg(const demo02_sr75::candata::ConstPtr& candata)
             cloud.points[cluster_count].x = radar_data_cluster.Cluster_DistLat;
             cloud.points[cluster_count].y = radar_data_cluster.Cluster_DistLong;
             cloud.points[cluster_count].z = radar_data_cluster.Cluster_Height;
+            cloud.points[cluster_count].intensity = radar_data_cluster.Cluster_VrelLong; // 速度作为强度
             cluster_count++;
-        } 
+        }
+
+        // ***所有点填充完毕后再发布点云***
+        if(cluster_count >= cluster_num)
+        {
+            pcl::toROSMsg(cloud, output);
+            output.header.frame_id = "odom";
+            output.header.stamp = ros::Time::now();
+            pcl_pub.publish(output);
+        }
     }
     else if(candata->frameid == 0x600)
     {
-        // cluster_num = (candata->data[0] << 8) + candata->data[1];
-        // cloud.width = cluster_num;
-        // cloud.height = 1;
-        // cloud.points.resize(cloud.width*cloud.height);
-        // cluster_count = 0;
         cluster_num = (candata->data[0] << 8) + candata->data[1];
         cloud.width = cluster_num;
         cloud.height = 1;
         cloud.points.resize(cloud.width * cloud.height);
         cluster_count = 0;
-        cluster_num = (candata->data[0] << 8) + candata->data[1];
-        cloud.width = cluster_num;
-        cloud.height = 1;
-        cloud.points.resize(cloud.width * cloud.height);
-        cluster_count = 0;
-
-        // 发布点云，frame_id改成坐标系
-        pcl::toROSMsg(cloud, output);
-        output.header.frame_id = "odom";
-        output.header.stamp = ros::Time::now();
-        pcl_pub.publish(output);
     }
 }
 
