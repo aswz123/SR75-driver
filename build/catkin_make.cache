@@ -1,0 +1,2 @@
+demo02_sr75
+-DCATKIN_DEVEL_PREFIX=/home/aswz/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/aswz/catkin_ws/install -G Unix Makefiles

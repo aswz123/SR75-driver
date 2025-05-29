@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="demo02_sr75" type="get_can_data" name="get_can_data" />
+    <node pkg="demo02_sr75" type="get_radar_info_cluster" name="get_radar_info_cluster" />
+    <!-- 启动rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find demo02_sr75)/config/radar.rviz" />
+</launch>
