@@ -1,1 +1,1 @@
-# RS75 driver
+# SR75 driver
