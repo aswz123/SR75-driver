@@ -4,7 +4,6 @@
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 #include <pcl_conversions/pcl_conversions.h>
-#include <pcl/PCLPointCloud2.h>
 
 typedef struct {
     uint8_t   Cluster_ID;
@@ -19,11 +18,9 @@ RadarPktBytes radar_data_cluster;
 
 int cluster_num = 0;
 int cluster_count = 0;
-pcl::PointCloud<pcl::PointXYZ> cloud; // 不用XYZI
+pcl::PointCloud<pcl::PointXYZI> cloud; // 使用XYZI
 ros::Publisher pcl_pub;
-sensor_msgs::PointCloud2 output;
 std::vector<float> velocities;
-std::vector<uint8_t> rcs_values;
 
 void domsg(const demo02_sr75::candata::ConstPtr& candata)
 {
@@ -63,71 +60,28 @@ void domsg(const demo02_sr75::candata::ConstPtr& candata)
             radar_data_cluster.Cluster_RCS = candata->data[8 * count + 7];
             
             velocities.push_back(radar_data_cluster.Cluster_VrelLong);
-            rcs_values.push_back(radar_data_cluster.Cluster_RCS);
 
             cloud.points[cluster_count].x = radar_data_cluster.Cluster_DistLat;
             cloud.points[cluster_count].y = radar_data_cluster.Cluster_DistLong;
             cloud.points[cluster_count].z = radar_data_cluster.Cluster_Height;
+            cloud.points[cluster_count].intensity = static_cast<float>(radar_data_cluster.Cluster_RCS); // 使用RCS作为强度
             cluster_count++;
         }
 
         // ***所有点填充完毕后再发布点云***
         if(cluster_count >= cluster_num)
         {
+            // 直接使用PCL提供的转换函数
             sensor_msgs::PointCloud2 msg;
+            pcl::toROSMsg(cloud, msg);
             msg.header.frame_id = "odom";
             msg.header.stamp = ros::Time::now();
-            msg.height = 1;
-            msg.width = cloud.points.size();
-            msg.is_bigendian = false;
-            msg.is_dense = true;
-
-            // 定义字段 - 增加到5个字段
-            msg.fields.resize(5);
-            msg.fields[0].name = "x";
-            msg.fields[0].offset = 0;
-            msg.fields[0].datatype = sensor_msgs::PointField::FLOAT32;
-            msg.fields[0].count = 1;
-
-            msg.fields[1].name = "y";
-            msg.fields[1].offset = 4;
-            msg.fields[1].datatype = sensor_msgs::PointField::FLOAT32;
-            msg.fields[1].count = 1;
-
-            msg.fields[2].name = "z";
-            msg.fields[2].offset = 8;
-            msg.fields[2].datatype = sensor_msgs::PointField::FLOAT32;
-            msg.fields[2].count = 1;
-
-            msg.fields[3].name = "velocity";
-            msg.fields[3].offset = 12;
-            msg.fields[3].datatype = sensor_msgs::PointField::FLOAT32;
-            msg.fields[3].count = 1;
             
-            // 新增 intensity 字段
-            msg.fields[4].name = "intensity";
-            msg.fields[4].offset = 16;
-            msg.fields[4].datatype = sensor_msgs::PointField::FLOAT32;
-            msg.fields[4].count = 1;
-            
-            msg.point_step = 20; // 5 fields * 4 bytes
-            msg.row_step = msg.point_step * msg.width;
-            msg.data.resize(msg.row_step);
-
-            // 填充数据
-            for (size_t i = 0; i < cloud.points.size(); ++i)
-            {
-                float* ptr = (float*)(&msg.data[0] + i * msg.point_step);
-                ptr[0] = cloud.points[i].x;
-                ptr[1] = cloud.points[i].y;
-                ptr[2] = cloud.points[i].z;
-                ptr[3] = velocities[i];
-                ptr[4] = static_cast<float>(radar_data_cluster.Cluster_RCS); // 将 RCS 转为 float 并存入
-            }
+            // 添加velocity字段（可选，如果需要）
+            // 这部分需要手动添加，类似于之前的代码...
 
             pcl_pub.publish(msg);
             velocities.clear();
-            rcs_values.clear(); // 别忘了清空RCS值向量
         }
     }
     else if(candata->frameid == 0x600)

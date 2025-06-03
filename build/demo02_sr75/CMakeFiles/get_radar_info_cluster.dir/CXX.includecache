@@ -35,8 +35,6 @@ pcl/point_types.h
 -
 pcl_conversions/pcl_conversions.h
 -
-pcl/PCLPointCloud2.h
--
 
 /opt/ros/noetic/include/pcl_conversions/pcl_conversions.h
 vector
