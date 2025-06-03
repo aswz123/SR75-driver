@@ -11,7 +11,7 @@ class RadarCluster(genpy.Message):
   _md5sum = "fe99fd61eb81690cb0da1c8e2444952c"
   _type = "demo02_sr75/RadarCluster"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """uint8   id              # 目标ID，0~255循环
+  _full_text = """uint8   id              # 目标ID，0~255循环,随机
 float32 dist_long_x       # 目标纵向距离，单位：米
 float32 dist_lat_y        # 目标横向距离，单位：米
 float32 velocity        # 目标径向速度，单位：m/s

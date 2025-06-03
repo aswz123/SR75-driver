@@ -151,7 +151,7 @@ class RadarCluster {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    uint8   id              # 目标ID，0~255循环
+    uint8   id              # 目标ID，0~255循环,随机
     float32 dist_long_x       # 目标纵向距离，单位：米
     float32 dist_lat_y        # 目标横向距离，单位：米
     float32 velocity        # 目标径向速度，单位：m/s

@@ -140,7 +140,7 @@
 (setf (get demo02_sr75::RadarCluster :md5sum-) "fe99fd61eb81690cb0da1c8e2444952c")
 (setf (get demo02_sr75::RadarCluster :datatype-) "demo02_sr75/RadarCluster")
 (setf (get demo02_sr75::RadarCluster :definition-)
-      "uint8   id              # 目标ID，0~255循环
+      "uint8   id              # 目标ID，0~255循环,随机
 float32 dist_long_x       # 目标纵向距离，单位：米
 float32 dist_lat_y        # 目标横向距离，单位：米
 float32 velocity        # 目标径向速度，单位：m/s

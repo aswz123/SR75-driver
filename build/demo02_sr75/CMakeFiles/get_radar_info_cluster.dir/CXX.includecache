@@ -27,11 +27,15 @@ ros/ros.h
 /home/aswz/catkin_ws/src/demo02_sr75/src/ros/ros.h
 demo02_sr75/candata.h
 -
+sensor_msgs/PointCloud2.h
+-
 pcl/point_cloud.h
-/home/aswz/catkin_ws/src/demo02_sr75/src/pcl/point_cloud.h
+-
+pcl/point_types.h
+-
 pcl_conversions/pcl_conversions.h
 -
-sensor_msgs/PointCloud2.h
+pcl/PCLPointCloud2.h
 -
 
 /opt/ros/noetic/include/pcl_conversions/pcl_conversions.h

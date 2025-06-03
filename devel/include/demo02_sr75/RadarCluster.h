@@ -194,7 +194,7 @@ struct Definition< ::demo02_sr75::RadarCluster_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "uint8   id              # 目标ID，0~255循环\n"
+    return "uint8   id              # 目标ID，0~255循环,随机\n"
 "float32 dist_long_x       # 目标纵向距离，单位：米\n"
 "float32 dist_lat_y        # 目标横向距离，单位：米\n"
 "float32 velocity        # 目标径向速度，单位：m/s\n"

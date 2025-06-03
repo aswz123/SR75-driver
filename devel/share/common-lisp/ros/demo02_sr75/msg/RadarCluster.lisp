@@ -199,10 +199,10 @@
   "fe99fd61eb81690cb0da1c8e2444952c")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<RadarCluster>)))
   "Returns full string definition for message of type '<RadarCluster>"
-  (cl:format cl:nil "uint8   id              # 目标ID，0~~255循环~%float32 dist_long_x       # 目标纵向距离，单位：米~%float32 dist_lat_y        # 目标横向距离，单位：米~%float32 velocity        # 目标径向速度，单位：m/s~%float32 height_z          # 目标高度，单位：米~%uint8   dyn_prop        # 目标动态属性~%uint8   rcs             # 目标信噪比~%float32 range           # 目标径向距离R，单位：米~%float32 angle           # 目标角度θ，单位：弧度~%~%"))
+  (cl:format cl:nil "uint8   id              # 目标ID，0~~255循环,随机~%float32 dist_long_x       # 目标纵向距离，单位：米~%float32 dist_lat_y        # 目标横向距离，单位：米~%float32 velocity        # 目标径向速度，单位：m/s~%float32 height_z          # 目标高度，单位：米~%uint8   dyn_prop        # 目标动态属性~%uint8   rcs             # 目标信噪比~%float32 range           # 目标径向距离R，单位：米~%float32 angle           # 目标角度θ，单位：弧度~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'RadarCluster)))
   "Returns full string definition for message of type 'RadarCluster"
-  (cl:format cl:nil "uint8   id              # 目标ID，0~~255循环~%float32 dist_long_x       # 目标纵向距离，单位：米~%float32 dist_lat_y        # 目标横向距离，单位：米~%float32 velocity        # 目标径向速度，单位：m/s~%float32 height_z          # 目标高度，单位：米~%uint8   dyn_prop        # 目标动态属性~%uint8   rcs             # 目标信噪比~%float32 range           # 目标径向距离R，单位：米~%float32 angle           # 目标角度θ，单位：弧度~%~%"))
+  (cl:format cl:nil "uint8   id              # 目标ID，0~~255循环,随机~%float32 dist_long_x       # 目标纵向距离，单位：米~%float32 dist_lat_y        # 目标横向距离，单位：米~%float32 velocity        # 目标径向速度，单位：m/s~%float32 height_z          # 目标高度，单位：米~%uint8   dyn_prop        # 目标动态属性~%uint8   rcs             # 目标信噪比~%float32 range           # 目标径向距离R，单位：米~%float32 angle           # 目标角度θ，单位：弧度~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <RadarCluster>))
   (cl:+ 0
      1

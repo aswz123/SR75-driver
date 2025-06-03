@@ -9,11 +9,11 @@ project(demo02_sr75)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  rospy
   std_msgs
-  message_generation
-  urdf
+  sensor_msgs
   pcl_ros
+  pcl_conversions
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -75,6 +75,7 @@ add_message_files(
 generate_messages(
   DEPENDENCIES
   std_msgs
+  sensor_msgs
 )
 
 ################################################
