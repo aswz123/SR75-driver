@@ -1,8 +1,8 @@
-# Install script for directory: /home/aswz/catkin_ws/src/demo02_sr75
+# Install script for directory: /home/aswz/SR75-driver/src/demo02_sr75
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/aswz/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/aswz/SR75-driver/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,55 +39,55 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/demo02_sr75/msg" TYPE FILE FILES
-    "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg"
-    "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg"
+    "/home/aswz/SR75-driver/src/demo02_sr75/msg/candata.msg"
+    "/home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/demo02_sr75/cmake" TYPE FILE FILES "/home/aswz/catkin_ws/build/demo02_sr75/catkin_generated/installspace/demo02_sr75-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/demo02_sr75/cmake" TYPE FILE FILES "/home/aswz/SR75-driver/build/demo02_sr75/catkin_generated/installspace/demo02_sr75-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/aswz/catkin_ws/devel/include/demo02_sr75")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/aswz/SR75-driver/devel/include/demo02_sr75")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/aswz/catkin_ws/devel/share/roseus/ros/demo02_sr75")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/aswz/SR75-driver/devel/share/roseus/ros/demo02_sr75")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/aswz/catkin_ws/devel/share/common-lisp/ros/demo02_sr75")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/aswz/SR75-driver/devel/share/common-lisp/ros/demo02_sr75")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/aswz/catkin_ws/devel/share/gennodejs/ros/demo02_sr75")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/aswz/SR75-driver/devel/share/gennodejs/ros/demo02_sr75")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/aswz/catkin_ws/devel/lib/python3/dist-packages/demo02_sr75")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/aswz/SR75-driver/devel/lib/python3/dist-packages/demo02_sr75")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/aswz/catkin_ws/devel/lib/python3/dist-packages/demo02_sr75")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/aswz/SR75-driver/devel/lib/python3/dist-packages/demo02_sr75")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/aswz/catkin_ws/build/demo02_sr75/catkin_generated/installspace/demo02_sr75.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/aswz/SR75-driver/build/demo02_sr75/catkin_generated/installspace/demo02_sr75.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/demo02_sr75/cmake" TYPE FILE FILES "/home/aswz/catkin_ws/build/demo02_sr75/catkin_generated/installspace/demo02_sr75-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/demo02_sr75/cmake" TYPE FILE FILES "/home/aswz/SR75-driver/build/demo02_sr75/catkin_generated/installspace/demo02_sr75-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/demo02_sr75/cmake" TYPE FILE FILES
-    "/home/aswz/catkin_ws/build/demo02_sr75/catkin_generated/installspace/demo02_sr75Config.cmake"
-    "/home/aswz/catkin_ws/build/demo02_sr75/catkin_generated/installspace/demo02_sr75Config-version.cmake"
+    "/home/aswz/SR75-driver/build/demo02_sr75/catkin_generated/installspace/demo02_sr75Config.cmake"
+    "/home/aswz/SR75-driver/build/demo02_sr75/catkin_generated/installspace/demo02_sr75Config-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/demo02_sr75" TYPE FILE FILES "/home/aswz/catkin_ws/src/demo02_sr75/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/demo02_sr75" TYPE FILE FILES "/home/aswz/SR75-driver/src/demo02_sr75/package.xml")
 endif()
 

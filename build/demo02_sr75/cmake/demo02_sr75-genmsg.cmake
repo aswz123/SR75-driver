@@ -2,7 +2,7 @@
 
 message(STATUS "demo02_sr75: 2 messages, 0 services")
 
-set(MSG_I_FLAGS "-Idemo02_sr75:/home/aswz/catkin_ws/src/demo02_sr75/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Idemo02_sr75:/home/aswz/SR75-driver/src/demo02_sr75/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,14 +17,14 @@ add_custom_target(demo02_sr75_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg" NAME_WE)
+get_filename_component(_filename "/home/aswz/SR75-driver/src/demo02_sr75/msg/candata.msg" NAME_WE)
 add_custom_target(_demo02_sr75_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "demo02_sr75" "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "demo02_sr75" "/home/aswz/SR75-driver/src/demo02_sr75/msg/candata.msg" ""
 )
 
-get_filename_component(_filename "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg" NAME_WE)
+get_filename_component(_filename "/home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg" NAME_WE)
 add_custom_target(_demo02_sr75_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "demo02_sr75" "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "demo02_sr75" "/home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg" ""
 )
 
 #
@@ -34,13 +34,13 @@ add_custom_target(_demo02_sr75_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(demo02_sr75
-  "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg"
+  "/home/aswz/SR75-driver/src/demo02_sr75/msg/candata.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/demo02_sr75
 )
 _generate_msg_cpp(demo02_sr75
-  "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg"
+  "/home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/demo02_sr75
@@ -60,9 +60,9 @@ add_custom_target(demo02_sr75_generate_messages_cpp
 add_dependencies(demo02_sr75_generate_messages demo02_sr75_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg" NAME_WE)
+get_filename_component(_filename "/home/aswz/SR75-driver/src/demo02_sr75/msg/candata.msg" NAME_WE)
 add_dependencies(demo02_sr75_generate_messages_cpp _demo02_sr75_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg" NAME_WE)
+get_filename_component(_filename "/home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg" NAME_WE)
 add_dependencies(demo02_sr75_generate_messages_cpp _demo02_sr75_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -75,13 +75,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS demo02_sr75_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(demo02_sr75
-  "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg"
+  "/home/aswz/SR75-driver/src/demo02_sr75/msg/candata.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/demo02_sr75
 )
 _generate_msg_eus(demo02_sr75
-  "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg"
+  "/home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/demo02_sr75
@@ -101,9 +101,9 @@ add_custom_target(demo02_sr75_generate_messages_eus
 add_dependencies(demo02_sr75_generate_messages demo02_sr75_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg" NAME_WE)
+get_filename_component(_filename "/home/aswz/SR75-driver/src/demo02_sr75/msg/candata.msg" NAME_WE)
 add_dependencies(demo02_sr75_generate_messages_eus _demo02_sr75_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg" NAME_WE)
+get_filename_component(_filename "/home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg" NAME_WE)
 add_dependencies(demo02_sr75_generate_messages_eus _demo02_sr75_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -116,13 +116,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS demo02_sr75_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(demo02_sr75
-  "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg"
+  "/home/aswz/SR75-driver/src/demo02_sr75/msg/candata.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/demo02_sr75
 )
 _generate_msg_lisp(demo02_sr75
-  "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg"
+  "/home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/demo02_sr75
@@ -142,9 +142,9 @@ add_custom_target(demo02_sr75_generate_messages_lisp
 add_dependencies(demo02_sr75_generate_messages demo02_sr75_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg" NAME_WE)
+get_filename_component(_filename "/home/aswz/SR75-driver/src/demo02_sr75/msg/candata.msg" NAME_WE)
 add_dependencies(demo02_sr75_generate_messages_lisp _demo02_sr75_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg" NAME_WE)
+get_filename_component(_filename "/home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg" NAME_WE)
 add_dependencies(demo02_sr75_generate_messages_lisp _demo02_sr75_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -157,13 +157,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS demo02_sr75_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(demo02_sr75
-  "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg"
+  "/home/aswz/SR75-driver/src/demo02_sr75/msg/candata.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/demo02_sr75
 )
 _generate_msg_nodejs(demo02_sr75
-  "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg"
+  "/home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/demo02_sr75
@@ -183,9 +183,9 @@ add_custom_target(demo02_sr75_generate_messages_nodejs
 add_dependencies(demo02_sr75_generate_messages demo02_sr75_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg" NAME_WE)
+get_filename_component(_filename "/home/aswz/SR75-driver/src/demo02_sr75/msg/candata.msg" NAME_WE)
 add_dependencies(demo02_sr75_generate_messages_nodejs _demo02_sr75_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg" NAME_WE)
+get_filename_component(_filename "/home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg" NAME_WE)
 add_dependencies(demo02_sr75_generate_messages_nodejs _demo02_sr75_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -198,13 +198,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS demo02_sr75_generate_messages_nodej
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(demo02_sr75
-  "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg"
+  "/home/aswz/SR75-driver/src/demo02_sr75/msg/candata.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/demo02_sr75
 )
 _generate_msg_py(demo02_sr75
-  "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg"
+  "/home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/demo02_sr75
@@ -224,9 +224,9 @@ add_custom_target(demo02_sr75_generate_messages_py
 add_dependencies(demo02_sr75_generate_messages demo02_sr75_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/aswz/catkin_ws/src/demo02_sr75/msg/candata.msg" NAME_WE)
+get_filename_component(_filename "/home/aswz/SR75-driver/src/demo02_sr75/msg/candata.msg" NAME_WE)
 add_dependencies(demo02_sr75_generate_messages_py _demo02_sr75_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg" NAME_WE)
+get_filename_component(_filename "/home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg" NAME_WE)
 add_dependencies(demo02_sr75_generate_messages_py _demo02_sr75_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

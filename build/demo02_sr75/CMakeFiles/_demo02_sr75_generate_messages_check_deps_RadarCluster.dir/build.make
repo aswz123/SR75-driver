@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aswz/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/aswz/SR75-driver/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aswz/catkin_ws/build
+CMAKE_BINARY_DIR = /home/aswz/SR75-driver/build
 
 # Utility rule file for _demo02_sr75_generate_messages_check_deps_RadarCluster.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/aswz/catkin_ws/build
 include demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/progress.make
 
 demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster:
-	cd /home/aswz/catkin_ws/build/demo02_sr75 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py demo02_sr75 /home/aswz/catkin_ws/src/demo02_sr75/msg/RadarCluster.msg 
+	cd /home/aswz/SR75-driver/build/demo02_sr75 && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py demo02_sr75 /home/aswz/SR75-driver/src/demo02_sr75/msg/RadarCluster.msg 
 
 _demo02_sr75_generate_messages_check_deps_RadarCluster: demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster
 _demo02_sr75_generate_messages_check_deps_RadarCluster: demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/build.make
@@ -67,10 +67,10 @@ demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.di
 .PHONY : demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/build
 
 demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/clean:
-	cd /home/aswz/catkin_ws/build/demo02_sr75 && $(CMAKE_COMMAND) -P CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/cmake_clean.cmake
+	cd /home/aswz/SR75-driver/build/demo02_sr75 && $(CMAKE_COMMAND) -P CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/cmake_clean.cmake
 .PHONY : demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/clean
 
 demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/depend:
-	cd /home/aswz/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aswz/catkin_ws/src /home/aswz/catkin_ws/src/demo02_sr75 /home/aswz/catkin_ws/build /home/aswz/catkin_ws/build/demo02_sr75 /home/aswz/catkin_ws/build/demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aswz/SR75-driver/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aswz/SR75-driver/src /home/aswz/SR75-driver/src/demo02_sr75 /home/aswz/SR75-driver/build /home/aswz/SR75-driver/build/demo02_sr75 /home/aswz/SR75-driver/build/demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : demo02_sr75/CMakeFiles/_demo02_sr75_generate_messages_check_deps_RadarCluster.dir/depend
 

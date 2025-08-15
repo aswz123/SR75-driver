@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/aswz/catkin_ws/devel/lib/demo02_sr75/get_radar_info_cluster"
-  "/home/aswz/catkin_ws/devel/lib/demo02_sr75/get_radar_info_cluster.pdb"
+  "/home/aswz/SR75-driver/devel/lib/demo02_sr75/get_radar_info_cluster"
+  "/home/aswz/SR75-driver/devel/lib/demo02_sr75/get_radar_info_cluster.pdb"
   "CMakeFiles/get_radar_info_cluster.dir/src/get_radar_info_cluster.cpp.o"
 )
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/aswz/catkin_ws/devel/share/gennodejs/ros/demo02_sr75/msg/RadarCluster.js"
-  "/home/aswz/catkin_ws/devel/share/gennodejs/ros/demo02_sr75/msg/candata.js"
+  "/home/aswz/SR75-driver/devel/share/gennodejs/ros/demo02_sr75/msg/RadarCluster.js"
+  "/home/aswz/SR75-driver/devel/share/gennodejs/ros/demo02_sr75/msg/candata.js"
   "CMakeFiles/demo02_sr75_generate_messages_nodejs"
 )
 

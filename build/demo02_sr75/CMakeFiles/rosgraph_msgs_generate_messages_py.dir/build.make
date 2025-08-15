@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aswz/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/aswz/SR75-driver/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aswz/catkin_ws/build
+CMAKE_BINARY_DIR = /home/aswz/SR75-driver/build
 
 # Utility rule file for rosgraph_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ demo02_sr75/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build: rosgraph_ms
 .PHONY : demo02_sr75/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 
 demo02_sr75/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
-	cd /home/aswz/catkin_ws/build/demo02_sr75 && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/aswz/SR75-driver/build/demo02_sr75 && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : demo02_sr75/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 demo02_sr75/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend:
-	cd /home/aswz/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aswz/catkin_ws/src /home/aswz/catkin_ws/src/demo02_sr75 /home/aswz/catkin_ws/build /home/aswz/catkin_ws/build/demo02_sr75 /home/aswz/catkin_ws/build/demo02_sr75/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aswz/SR75-driver/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aswz/SR75-driver/src /home/aswz/SR75-driver/src/demo02_sr75 /home/aswz/SR75-driver/build /home/aswz/SR75-driver/build/demo02_sr75 /home/aswz/SR75-driver/build/demo02_sr75/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : demo02_sr75/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
 

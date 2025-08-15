@@ -1,4 +1,4 @@
-prefix=/home/aswz/catkin_ws/install
+prefix=/home/aswz/SR75-driver/install
 
 Name: demo02_sr75
 Description: Description of demo02_sr75

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/aswz/catkin_ws/devel/share/common-lisp/ros/demo02_sr75/msg/RadarCluster.lisp"
-  "/home/aswz/catkin_ws/devel/share/common-lisp/ros/demo02_sr75/msg/candata.lisp"
+  "/home/aswz/SR75-driver/devel/share/common-lisp/ros/demo02_sr75/msg/RadarCluster.lisp"
+  "/home/aswz/SR75-driver/devel/share/common-lisp/ros/demo02_sr75/msg/candata.lisp"
   "CMakeFiles/demo02_sr75_generate_messages_lisp"
 )
 

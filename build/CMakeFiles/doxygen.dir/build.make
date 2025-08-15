@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aswz/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/aswz/SR75-driver/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aswz/catkin_ws/build
+CMAKE_BINARY_DIR = /home/aswz/SR75-driver/build
 
 # Utility rule file for doxygen.
 
@@ -67,6 +67,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/aswz/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aswz/catkin_ws/src /home/aswz/catkin_ws/src /home/aswz/catkin_ws/build /home/aswz/catkin_ws/build /home/aswz/catkin_ws/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/aswz/SR75-driver/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aswz/SR75-driver/src /home/aswz/SR75-driver/src /home/aswz/SR75-driver/build /home/aswz/SR75-driver/build /home/aswz/SR75-driver/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 

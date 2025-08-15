@@ -67,14 +67,14 @@ set(demo02_sr75_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(demo02_sr75_SOURCE_PREFIX /home/aswz/catkin_ws/src/demo02_sr75)
-  set(demo02_sr75_DEVEL_PREFIX /home/aswz/catkin_ws/devel)
+  set(demo02_sr75_SOURCE_PREFIX /home/aswz/SR75-driver/src/demo02_sr75)
+  set(demo02_sr75_DEVEL_PREFIX /home/aswz/SR75-driver/devel)
   set(demo02_sr75_INSTALL_PREFIX "")
   set(demo02_sr75_PREFIX ${demo02_sr75_DEVEL_PREFIX})
 else()
   set(demo02_sr75_SOURCE_PREFIX "")
   set(demo02_sr75_DEVEL_PREFIX "")
-  set(demo02_sr75_INSTALL_PREFIX /home/aswz/catkin_ws/install)
+  set(demo02_sr75_INSTALL_PREFIX /home/aswz/SR75-driver/install)
   set(demo02_sr75_PREFIX ${demo02_sr75_INSTALL_PREFIX})
 endif()
 
@@ -156,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/aswz/catkin_ws/install/lib;/home/aswz/catkin_ws/devel/lib;/home/aswz/Sunray/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/aswz/SR75-driver/install/lib;/home/aswz/catkin_ws/devel/lib;/home/aswz/Sunray/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
